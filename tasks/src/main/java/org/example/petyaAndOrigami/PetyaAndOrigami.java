@@ -1,4 +1,4 @@
-package org.example.petya;
+package org.example.petyaAndOrigami;
 
 import java.util.Scanner;
 
