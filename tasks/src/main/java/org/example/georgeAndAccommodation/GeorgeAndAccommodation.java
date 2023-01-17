@@ -22,7 +22,6 @@ public class GeorgeAndAccommodation {
                 counter++;
             }
         }
-        // Do we always have to close scanner??
         sc.close();
         return counter;
     }
