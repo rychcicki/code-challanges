@@ -11,7 +11,6 @@ import java.util.regex.Pattern;
 public class AStartUp1 {
     Scanner sc = new Scanner(System.in);
     String nameOfFirm = sc.nextLine();
-    //sc.close();
 
     public boolean aStartUp1(String nameOfFirm) {
         Pattern patternOfSymmetricalLetters = Pattern.compile("[AHIMOTUVWXY]*");
