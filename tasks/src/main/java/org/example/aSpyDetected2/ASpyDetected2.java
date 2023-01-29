@@ -38,7 +38,7 @@ public class ASpyDetected2 {
         int firstNumberOfListOfNumbers = listOfNumbers.get(0);
 
         if (firstNumberOfListOfNumbers == listOfNumbers.get(1)) {
-            key = listOfNumbers.get(listOfNumbers.size() - 1);
+            key = listOfNumbers.get(arr.length - 1);
         } else {
             key = firstNumberOfListOfNumbers;
         }
