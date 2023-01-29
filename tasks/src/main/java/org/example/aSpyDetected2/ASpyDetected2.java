@@ -35,11 +35,12 @@ public class ASpyDetected2 {
                 .boxed()
                 .sorted()
                 .toList();
+        int firstNumberOfListOfNumbers = listOfNumbers.get(0);
 
-        if (listOfNumbers.get(0) == listOfNumbers.get(1)) {
+        if (firstNumberOfListOfNumbers == listOfNumbers.get(1)) {
             key = listOfNumbers.get(listOfNumbers.size() - 1);
         } else {
-            key = listOfNumbers.get(0);
+            key = firstNumberOfListOfNumbers;
         }
 
         for (int j = 0; j < arr.length; j++) {
