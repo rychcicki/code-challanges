@@ -10,15 +10,10 @@ import java.util.StringTokenizer;
  * WARNING: Submit only in Roco language!!! It is not possible to submit code in Java.
  */
 public class FBinaryNotation {
-    public static void main(String[] args) {
-        FBinaryNotation myMain = new FBinaryNotation();
+    FBinaryNotation.FastReader sc = new FastReader();
+    int n = sc.nextInt();
 
-        FBinaryNotation.FastReader sc = new FastReader();
-        int n = sc.nextInt();
-        myMain.binaryNotation(n);
-    }
-
-    public int binaryNotation(int n) {
+    int binaryNotation(int n) {
         int[] binaryArr = new int[21];
         int index = 0;
         StringBuilder binaryBuilder = new StringBuilder();
@@ -53,6 +48,7 @@ public class FBinaryNotation {
             }
             return st.nextToken();
         }
+
         int nextInt() {
             return Integer.parseInt(next());
         }
