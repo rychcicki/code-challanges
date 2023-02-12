@@ -6,21 +6,21 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 /**
- *  https://codeforces.com/contest/381/problem/A
+ * https://codeforces.com/contest/381/problem/A
  */
 public class ASerejaAndDima {
-    FastReader sc = new FastReader();
-    short numberOfFreeCards = sc.nextShort();
-    short[] cards = new short[numberOfFreeCards];
+    private FastReader sc = new FastReader();
+    private short numberOfFreeCards = sc.nextShort();
+    private short[] cards = new short[numberOfFreeCards];
+
+    private short greaterNumber;
+    private int cardsOfSereja, cardsOfDima;
 
     void loop() {
         for (short i = 0; i < numberOfFreeCards; i++) {
             cards[i] = sc.nextShort();
         }
     }
-
-    short greaterNumber;
-    int cardsOfSereja, cardsOfDima;
 
     String aSerejaAndDima(short numberOfFreeCards, short[] cards) {
         short numberOfTurn = numberOfFreeCards;
