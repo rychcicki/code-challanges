@@ -5,6 +5,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+/**
+ *  https://codeforces.com/contest/381/problem/A
+ */
 public class ASerejaAndDima {
     FastReader sc = new FastReader();
     short numberOfFreeCards = sc.nextShort();
