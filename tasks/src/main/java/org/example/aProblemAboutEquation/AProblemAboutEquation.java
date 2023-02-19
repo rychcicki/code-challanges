@@ -1,4 +1,4 @@
-package org.example;
+package org.example.aProblemAboutEquation;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,9 +10,9 @@ import java.util.StringTokenizer;
 /**
  * https://codeforces.com/problemset/problem/174/A
  */
-public class AProblemAboutEquation3 {
+public class AProblemAboutEquation {
     float aProblemAboutEquation() {
-        AProblemAboutEquation3.FastReader sc = new AProblemAboutEquation3.FastReader();
+        AProblemAboutEquation.FastReader sc = new AProblemAboutEquation.FastReader();
         int numberOfFriends = sc.nextInt();
         int millilitersOfTheDrinkInTheBottle = sc.nextInt();
 
@@ -28,13 +28,11 @@ public class AProblemAboutEquation3 {
         for (int i = 0; i < numberOfFriends; i++) {
             volumeOfTheDrinkToAdd.add(averageVolumeOfTheDrinkInMug - volumeOfTheDrinkInTheMugs.get(i));
             if (volumeOfTheDrinkToAdd.get(i) < 0) {
-                // System.out.println(-1);
                 return -1;
             }
         }
 
         for (int i = 0; i < numberOfFriends; i++) {
-            // System.out.printf("%f\n", volumeOfTheDrinkToAdd.get(i)); //"%.6f\n"
             return volumeOfTheDrinkToAdd.get(i);
         }
         return 0;
