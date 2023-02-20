@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
  * https://codeforces.com/problemset/problem/174/A
  */
 public class AProblemAboutEquation {
-    float aProblemAboutEquation() {
+    List<Float> aProblemAboutEquation() {
         AProblemAboutEquation.FastReader sc = new AProblemAboutEquation.FastReader();
         int numberOfFriends = sc.nextInt();
         int millilitersOfTheDrinkInTheBottle = sc.nextInt();
@@ -28,14 +28,10 @@ public class AProblemAboutEquation {
         for (int i = 0; i < numberOfFriends; i++) {
             volumeOfTheDrinkToAdd.add(averageVolumeOfTheDrinkInMug - volumeOfTheDrinkInTheMugs.get(i));
             if (volumeOfTheDrinkToAdd.get(i) < 0) {
-                return -1;
+                return List.of(-1f);
             }
         }
-
-        for (int i = 0; i < numberOfFriends; i++) {
-            return volumeOfTheDrinkToAdd.get(i);
-        }
-        return 0;
+        return volumeOfTheDrinkToAdd;
     }
 
     static class FastReader {
