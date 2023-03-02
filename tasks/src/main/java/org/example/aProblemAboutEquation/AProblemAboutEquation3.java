@@ -1,4 +1,4 @@
-package org.example;
+package org.example.aProblemAboutEquation;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -19,6 +19,10 @@ public class AProblemAboutEquation3 {
     // private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(AProblemAboutEquation3.class);
     public static void main(String[] args) {
         AProblemAboutEquation3 myMain = new AProblemAboutEquation3();
+        /**
+         * A ten sposób to nie z Lombocka??
+         * log("");
+         */
 //        log("something");
         log.info("something else");
 //        log.debug("what??");
@@ -27,7 +31,7 @@ public class AProblemAboutEquation3 {
     }
 
     List<Float> aProblemAboutEquationWithFastScan() {
-        AProblemAboutEquation3.FastReader sc = new AProblemAboutEquation3.FastReader();
+        FastReader sc = new FastReader();
         int numberOfFriends = sc.nextInt();
         int millilitersOfTheDrinkInTheBottle = sc.nextInt();
 
