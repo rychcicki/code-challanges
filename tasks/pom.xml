@@ -13,7 +13,6 @@
         <maven.compiler.target>19</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -51,5 +50,4 @@
             <version>2.0.6</version>
         </dependency>
     </dependencies>
-
 </project>
