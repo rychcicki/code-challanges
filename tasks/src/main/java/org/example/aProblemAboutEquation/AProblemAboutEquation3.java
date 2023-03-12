@@ -1,7 +1,5 @@
 package org.example.aProblemAboutEquation;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -14,25 +12,19 @@ import java.util.StringTokenizer;
  * https://codeforces.com/problemset/problem/174/A
  */
 
-@Slf4j
 public class AProblemAboutEquation3 {
-    // private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(AProblemAboutEquation3.class);
-    public static void main(String[] args) {
-        AProblemAboutEquation3 myMain = new AProblemAboutEquation3();
-        /**
-         * A ten sposób to nie z Lombocka??
-         * log("");
-         */
-//        log("something");
-        log.info("something else");
-//        log.debug("what??");
-        myMain.aProblemAboutEquationWithFastScan();
+    boolean numberOfFriendsVerifier(int numberOfFriends) {
+        return numberOfFriends >= 2 && numberOfFriends <= 100;
+    }
 
+    boolean millilitersOfTheDrinkInTheBottleVerifier(int millilitersOfTheDrinkInTheBottle) {
+        return millilitersOfTheDrinkInTheBottle >= 1 && millilitersOfTheDrinkInTheBottle <= 100;
     }
 
     List<Float> aProblemAboutEquationWithFastScan() {
         FastReader sc = new FastReader();
         int numberOfFriends = sc.nextInt();
+//        numberOfFriendsVerifier(numberOfFriends);
         int millilitersOfTheDrinkInTheBottle = sc.nextInt();
 
         List<Integer> volumeOfTheDrinkInTheMugs = new ArrayList<>();
@@ -66,8 +58,7 @@ public class AProblemAboutEquation3 {
         StringTokenizer st;
 
         public FastReader() {
-            br = new BufferedReader(
-                    new InputStreamReader(System.in));
+            br = new BufferedReader(new InputStreamReader(System.in));
         }
 
         String next() {
