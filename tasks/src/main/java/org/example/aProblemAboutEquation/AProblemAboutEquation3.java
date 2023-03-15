@@ -7,10 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-
-/**
- * https://codeforces.com/problemset/problem/174/A
- */
+//  https://codeforces.com/problemset/problem/174/A
 
 public class AProblemAboutEquation3 {
     boolean numberOfFriendsVerifier(int numberOfFriends) {
@@ -21,10 +18,9 @@ public class AProblemAboutEquation3 {
         return millilitersOfTheDrinkInTheBottle >= 1 && millilitersOfTheDrinkInTheBottle <= 100;
     }
 
-    List<Float> aProblemAboutEquationWithFastScan() {
+    private List<Float> aProblemAboutEquationWithFastScan() {
         FastReader sc = new FastReader();
         int numberOfFriends = sc.nextInt();
-//        numberOfFriendsVerifier(numberOfFriends);
         int millilitersOfTheDrinkInTheBottle = sc.nextInt();
 
         List<Integer> volumeOfTheDrinkInTheMugs = new ArrayList<>();
@@ -45,15 +41,13 @@ public class AProblemAboutEquation3 {
         for (int i = 0; i < numberOfFriends; i++) {
             volumeOfTheDrinkToAdd.add(averageVolumeOfTheDrinkInMug - volumeOfTheDrinkInTheMugs.get(i));
             if (volumeOfTheDrinkToAdd.get(i) < 0) {
-                System.out.println(-1);
                 return List.of(-1f);
             }
         }
-        System.out.println(volumeOfTheDrinkToAdd);
         return volumeOfTheDrinkToAdd;
     }
 
-    static class FastReader {
+    private static class FastReader {
         BufferedReader br;
         StringTokenizer st;
 
