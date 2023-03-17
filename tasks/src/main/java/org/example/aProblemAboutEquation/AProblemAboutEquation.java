@@ -7,9 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-/**
- * https://codeforces.com/problemset/problem/174/A
- */
+// https://codeforces.com/problemset/problem/174/A
+
 public class AProblemAboutEquation {
     List<Float> aProblemAboutEquation() {
         AProblemAboutEquation.FastReader sc = new AProblemAboutEquation.FastReader();
