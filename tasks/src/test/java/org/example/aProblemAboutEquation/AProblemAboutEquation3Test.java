@@ -40,7 +40,6 @@ class AProblemAboutEquation3Test {
         Assertions.assertEquals(false, millilitersOfTheDrinkInTheBottleVerifier);
     }
 
-
     @Test
     void shouldReturnTrueWhenOutputListOfFloats() {
         //given - arrange
