@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 class ASerejaAndDima2Test {
-    private final ASerejaAndDima2.ASerejaAndDima2Verifier aSerejaAndDima2Verifier = new ASerejaAndDima2.ASerejaAndDima2Verifier();
+    private final ASerejaAndDima2Verifier aSerejaAndDima2Verifier = new ASerejaAndDima2Verifier();
     private final ASerejaAndDima2 aSerejaAndDima2 = new ASerejaAndDima2();
     private static List<Integer> listOfCardsInsert;
 
@@ -57,8 +57,6 @@ class ASerejaAndDima2Test {
     @Test
     void shouldReturnTrueWhenNumbersInListOfCardsAreDistinct() {
         //given
-        //List<Integer> listOfCards = List.of(1, 2, 3, 4, 5, 6, 7);
-        //Czy może nie być 'given', jeżeli generujemy dane poprzez odrębną metodę statyczną z @BeforeAll??
 
         //when
         boolean checkDistinctNumbersInListOfCards = aSerejaAndDima2Verifier.distinctNumbersOfCardsInListVerifier(listOfCardsInsert);
@@ -83,7 +81,6 @@ class ASerejaAndDima2Test {
     void shouldReturnOutputList() {
         //given
         int numberOfCards = 7;
-//        List<Integer> listOfCards = List.of(1, 2, 3, 4, 5, 6, 7);
 
         //when - act
         List<Integer> checkList = aSerejaAndDima2.countingNumbersOfCards(numberOfCards, listOfCardsInsert);
