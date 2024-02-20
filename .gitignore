@@ -144,3 +144,7 @@ replay_pid*
 
 # My IntelliJ idex files
 *.index
+.idea/compiler.xml
+.idea/jpa-buddy.xml
+.idea/misc.xml
+.idea/modules.xml
