@@ -141,10 +141,6 @@ hs_err_pid*
 replay_pid*
 
 # End of https://www.toptal.com/developers/gitignore/api/java,intellij
-.idea/compiler.xml
-.idea/jpa-buddy.xml
-.idea/misc.xml
-.idea/modules.xml
-tasks/target/classes/classpath.index
-tasks/target/classes/classpath.index
-tasks/target/classes/classpath.index
+
+# My IntelliJ idex files
+*.index
