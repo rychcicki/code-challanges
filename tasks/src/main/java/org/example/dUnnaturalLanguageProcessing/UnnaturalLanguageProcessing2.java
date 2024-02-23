@@ -13,15 +13,14 @@ import java.util.StringTokenizer;
  */
 @Slf4j
 public class UnnaturalLanguageProcessing2 {
-    static boolean isVowel(char ch) {
+    boolean isVowel(char ch) {
         return ch == 'a' || ch == 'e';
     }
 
-    static String unnaturalLanguageProcessingFastScan() {
+    String unnaturalLanguageProcessingFastScan() {
         FastReader sc = new FastReader();
         int numberOfTests = sc.nextInt();
         String sentence = "";
-
         while (numberOfTests-- > 0) {
             int wordLength = sc.nextInt();
             sentence = sc.next();
@@ -32,7 +31,7 @@ public class UnnaturalLanguageProcessing2 {
         return sentence;
     }
 
-    static String unnaturalLanguageProcessing(String sentence) {
+    String unnaturalLanguageProcessing(String sentence) {
         StringBuilder syllables = new StringBuilder();
 
         for (int i = 0; i < sentence.length(); i++) {
