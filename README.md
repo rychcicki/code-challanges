@@ -4,7 +4,6 @@
 
 This repository contains solutions to various programming problems from Codeforces and LeetCode, implemented in Java. Each problem is solved in its own class along with a link to the problem statement.
 
----
 ## Codeforces problems
 
 
@@ -43,8 +42,6 @@ This repository contains solutions to various programming problems from Codeforc
 9. **[1915/D](https://codeforces.com/problemset/problem/1915/D)**
    - **Problem:** Unnatural Language Processing
    - **Class:** `UnnaturalLanguageProcessing` ...
-
----
 
 ## LeetCode problems
 
