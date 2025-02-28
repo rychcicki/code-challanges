@@ -1,4 +1,4 @@
-package org.example.aStartUp3;
+package org.example.startUp;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,22 +7,22 @@ import java.util.Set;
 import java.util.StringTokenizer;
 import java.util.stream.IntStream;
 
-/**
- * https://codeforces.com/problemset/problem/420/A
- * Solution with Collections (Set), stream and FastReader (BufferedReader)
- */
-public class AStartUp3 {
-    FastReader sc = new FastReader();
-    String nameOfFirm = sc.next();
+// https://codeforces.com/problemset/problem/420/A
+// Solution with Collections (Set), stream and FastReader (BufferedReader)
 
-    public boolean aStartUp(String nameOfFirm) {
-        Set<Character> symmetricalLetters = Set.of('A', 'H', 'I', 'M', 'O', 'T', 'U', 'V', 'W', 'X', 'Y');
+class StartUpSetAndFastReaderVersion {
+    private final FastReader sc = new FastReader();
+    private final String nameOfFirm = sc.next();
+
+    boolean startUpSetAndFastReaderVersion(String nameOfFirm) {
+        final Set<Character> symmetricalLetters = Set.of('A', 'H', 'I', 'M', 'O', 'T', 'U', 'V', 'W', 'X', 'Y');
 
         return IntStream.range(0, nameOfFirm.length() / 2 + 1)
-                .noneMatch(i -> nameOfFirm.charAt(i) != nameOfFirm.charAt(nameOfFirm.length() - 1 - i) || !symmetricalLetters.contains(nameOfFirm.charAt(i)));
+                .noneMatch(i -> nameOfFirm.charAt(i) != nameOfFirm.charAt(nameOfFirm.length() - 1 - i)
+                        || !symmetricalLetters.contains(nameOfFirm.charAt(i)));
     }
 
-    static class FastReader {
+    private static class FastReader {
         BufferedReader br;
         StringTokenizer st;
 

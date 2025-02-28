@@ -1,4 +1,4 @@
-package org.example.aSerejaAndDima;
+package org.example.serejaAndDima;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,14 +7,14 @@ import java.util.*;
 
 // https://codeforces.com/contest/381/problem/A
 
-public class ASerejaAndDima2 {
-    int sumOfCardsOfSereja = 0;
-    int sumOfCardsOfDima = 0;
+class SerejaAndDimaVerified {
+    private int sumOfCardsOfSereja = 0;
+    private int sumOfCardsOfDima = 0;
 
-    void inputFastReader() {
-        ASerejaAndDima2.FastReader sc = new FastReader();
-        int numberOfCards = sc.nextInt();
-        List<Integer> listOfCards = new ArrayList<>();
+    void serejaAndDimaFastReader() {
+        final SerejaAndDimaVerified.FastReader sc = new FastReader();
+        final int numberOfCards = sc.nextInt();
+        final List<Integer> listOfCards = new ArrayList<>();
         int numbersForLoop = numberOfCards;
         while (numbersForLoop-- > 0) {
             listOfCards.add(sc.nextInt());
@@ -35,7 +35,6 @@ public class ASerejaAndDima2 {
                 whoseCardIsIt(counterOfTurns, greaterNumber);
             }
         }
-
         return List.of(sumOfCardsOfSereja, sumOfCardsOfDima);
     }
 

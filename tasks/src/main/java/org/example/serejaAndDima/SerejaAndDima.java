@@ -1,17 +1,16 @@
-package org.example.aSerejaAndDima;
+package org.example.serejaAndDima;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-/**
- * https://codeforces.com/contest/381/problem/A
- */
-public class ASerejaAndDima {
-    private FastReader sc = new FastReader();
-    private short numberOfFreeCards = sc.nextShort();
-    private short[] cards = new short[numberOfFreeCards];
+// https://codeforces.com/contest/381/problem/A
+
+class SerejaAndDima {
+    private final FastReader sc = new FastReader();
+    private final short numberOfFreeCards = sc.nextShort();
+    private final short[] cards = new short[numberOfFreeCards];
 
     private short greaterNumber;
     private int cardsOfSereja, cardsOfDima;
@@ -22,8 +21,8 @@ public class ASerejaAndDima {
         }
     }
 
-    String aSerejaAndDima(short numberOfFreeCards, short[] cards) {
-        short numberOfTurn = numberOfFreeCards;
+    String serejaAndDima(short numberOfFreeCards, short[] cards) {
+        final short numberOfTurn = numberOfFreeCards;
         short whoseTurnNow = 1;
 
         if (numberOfFreeCards == 1) {
@@ -54,7 +53,7 @@ public class ASerejaAndDima {
         }
     }
 
-    static class FastReader {
+    private static class FastReader {
         BufferedReader br;
         StringTokenizer st;
 
