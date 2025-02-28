@@ -3,13 +3,11 @@ package org.example.uniqueDigits;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * 260. Single Number III
- * https://leetcode.com/problems/single-number-iii/description/
- */
-public class UniqueDigits {
-    public int[] singleNumberIII(int[] nums) {
-        Map<Integer, Integer> mapArrToKeys = new HashMap<>();
+// https://leetcode.com/problems/single-number-iii/description/
+
+class UniqueDigits {
+    int[] singleNumberIII(int[] nums) {
+        final Map<Integer, Integer> mapArrToKeys = new HashMap<>();
         if (nums.length <= 2) {
             return nums;
         }
@@ -22,12 +20,10 @@ public class UniqueDigits {
             }
         }
 
-        int[] unique = mapArrToKeys.entrySet()
+        return mapArrToKeys.entrySet()
                 .stream()
                 .filter(entry -> entry.getValue().equals(1))
                 .mapToInt(Map.Entry::getKey)
                 .toArray();
-
-        return unique;
     }
 }

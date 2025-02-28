@@ -1,4 +1,4 @@
-package org.example.aProblemAboutEquation;
+package org.example.problemAboutEquation;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,35 +9,29 @@ import java.util.StringTokenizer;
 
 //  https://codeforces.com/problemset/problem/174/A
 
-public class AProblemAboutEquation3 {
-    boolean numberOfFriendsVerifier(int numberOfFriends) {
-        return numberOfFriends >= 2 && numberOfFriends <= 100;
-    }
-
-    boolean millilitersOfTheDrinkInTheBottleVerifier(int millilitersOfTheDrinkInTheBottle) {
-        return millilitersOfTheDrinkInTheBottle >= 1 && millilitersOfTheDrinkInTheBottle <= 100;
-    }
-
-    private List<Float> aProblemAboutEquationWithFastScan() {
-        FastReader sc = new FastReader();
-        int numberOfFriends = sc.nextInt();
-        int millilitersOfTheDrinkInTheBottle = sc.nextInt();
+class ProblemAboutEquationVerified {
+    List<Float> problemAboutEquationFastReader() {
+        final FastReader sc = new FastReader();
+        final int numberOfFriends = sc.nextInt();
+        final int millilitersOfTheDrinkInTheBottle = sc.nextInt();
 
         List<Integer> volumeOfTheDrinkInTheMugs = new ArrayList<>();
         for (int i = 0; i < numberOfFriends; i++) {
             volumeOfTheDrinkInTheMugs.add(sc.nextInt());
         }
-        return aProblemAboutEquation(numberOfFriends, millilitersOfTheDrinkInTheBottle, volumeOfTheDrinkInTheMugs);
+        return problemAboutEquation(numberOfFriends, millilitersOfTheDrinkInTheBottle, volumeOfTheDrinkInTheMugs);
     }
 
-    List<Float> aProblemAboutEquation(int numberOfFriends, int millilitersOfTheDrinkInTheBottle, List<Integer> volumeOfTheDrinkInTheMugs) {
+    List<Float> problemAboutEquation(int numberOfFriends, int millilitersOfTheDrinkInTheBottle,
+                                     List<Integer> volumeOfTheDrinkInTheMugs) {
         float sumVolumeOfTheDrinkInAllMugs = 0;
         for (int i = 0; i < numberOfFriends; i++) {
             sumVolumeOfTheDrinkInAllMugs += volumeOfTheDrinkInTheMugs.get(i);
         }
 
-        List<Float> volumeOfTheDrinkToAdd = new ArrayList<>();
-        float averageVolumeOfTheDrinkInMug = (sumVolumeOfTheDrinkInAllMugs + millilitersOfTheDrinkInTheBottle) / numberOfFriends;
+        final List<Float> volumeOfTheDrinkToAdd = new ArrayList<>();
+        final float averageVolumeOfTheDrinkInMug =
+                (sumVolumeOfTheDrinkInAllMugs + millilitersOfTheDrinkInTheBottle) / numberOfFriends;
         for (int i = 0; i < numberOfFriends; i++) {
             volumeOfTheDrinkToAdd.add(averageVolumeOfTheDrinkInMug - volumeOfTheDrinkInTheMugs.get(i));
             if (volumeOfTheDrinkToAdd.get(i) < 0) {
@@ -45,6 +39,14 @@ public class AProblemAboutEquation3 {
             }
         }
         return volumeOfTheDrinkToAdd;
+    }
+
+    boolean numberOfFriendsVerifier(int numberOfFriends) {
+        return numberOfFriends >= 2 && numberOfFriends <= 100;
+    }
+
+    boolean millilitersOfTheDrinkInTheBottleVerifier(int millilitersOfTheDrinkInTheBottle) {
+        return millilitersOfTheDrinkInTheBottle >= 1 && millilitersOfTheDrinkInTheBottle <= 100;
     }
 
     private static class FastReader {

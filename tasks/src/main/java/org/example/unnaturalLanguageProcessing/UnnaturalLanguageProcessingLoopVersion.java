@@ -1,4 +1,4 @@
-package org.example.dUnnaturalLanguageProcessing;
+package org.example.unnaturalLanguageProcessing;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -7,18 +7,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-/**
- * https://codeforces.com/problemset/problem/1915/D
- * Only loop version
- */
-@Slf4j
-public class UnnaturalLanguageProcessing2 {
-    boolean isVowel(char ch) {
-        return ch == 'a' || ch == 'e';
-    }
+// https://codeforces.com/problemset/problem/1915/D
 
+@Slf4j
+class UnnaturalLanguageProcessingLoopVersion {
     String unnaturalLanguageProcessingFastScan() {
-        FastReader sc = new FastReader();
+        final FastReader sc = new FastReader();
         int numberOfTests = sc.nextInt();
         String sentence = "";
         while (numberOfTests-- > 0) {
@@ -32,7 +26,7 @@ public class UnnaturalLanguageProcessing2 {
     }
 
     String unnaturalLanguageProcessing(String sentence) {
-        StringBuilder syllables = new StringBuilder();
+        final StringBuilder syllables = new StringBuilder();
 
         for (int i = 0; i < sentence.length(); i++) {
             if (i != 0 && !isVowel(sentence.charAt(i))) {
@@ -45,7 +39,11 @@ public class UnnaturalLanguageProcessing2 {
         return syllables.toString();
     }
 
-    static class FastReader {
+    boolean isVowel(char ch) {
+        return ch == 'a' || ch == 'e';
+    }
+
+    private static class FastReader {
         BufferedReader br;
         StringTokenizer st;
 

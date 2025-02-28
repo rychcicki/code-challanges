@@ -8,40 +8,40 @@ This repository contains solutions to various programming problems from Codeforc
 
 
 1. **[174/A](https://codeforces.com/problemset/problem/174/A)**
-   - **Problem:** A Problem About Equation
-   - **Class:** `AProblemAboutEquation` ...
+   - **Problem:** A. Problem About Equation
+   - **Class:** `ProblemAboutEquation` + unit tests
    
 2. **[188/F](https://codeforces.com/problemset/problem/188/F)**
-   - **Problem:** Binary Notation
-   - **Class:** `FBinaryNotation`
+   - **Problem:** F. Binary Notation
+   - **Class:** `BinaryNotation`
 
 3. **[381/A](https://codeforces.com/contest/381/problem/A)**
-   - **Problem:** Sereja and Dima
-   - **Class:** `ASerejaAndDima` ...
+   - **Problem:** A. Sereja and Dima
+   - **Class:** `SerejaAndDima` + unit tests
 
 4. **[420/A](https://codeforces.com/problemset/problem/420/A)**
-   - **Problem:** Start Up
-   - **Class:** `AStartUp1` ...
+   - **Problem:** A. Start Up
+   - **Class:** `StartUpPatternAndScannerVersion` + other versions
 
 5. **[467/A](https://codeforces.com/problemset/problem/467/A)**
-   - **Problem:** George and Accommodation
+   - **Problem:** A. George and Accommodation
    - **Class:** `GeorgeAndAccommodation`
 
 6. **[1065/A](https://codeforces.com/problemset/problem/1065/A)**
-   - **Problem:** Vasya and Chocolate
+   - **Problem:** A. Vasya and Chocolate
    - **Class:** `VasyaAndChocolate`
 
 7. **[1080/A](https://codeforces.com/problemset/problem/1080/A)**
-   - **Problem:** Petya and Origami
+   - **Problem:** A. Petya and Origami
    - **Class:** `PetyaAndOrigami`
 
 8. **[1512/A](https://codeforces.com/problemset/problem/1512/A)**
-   - **Problem:** Spy Detected!
-   - **Class:** `ASpyDetected1`
+   - **Problem:** A. Spy Detected!
+   - **Class:** `SpyDetected`
 
 9. **[1915/D](https://codeforces.com/problemset/problem/1915/D)**
-   - **Problem:** Unnatural Language Processing
-   - **Class:** `UnnaturalLanguageProcessing` ...
+   - **Problem:** D. Unnatural Language Processing
+   - **Class:** `UnnaturalLanguageProcessing` + unit tests
 
 ## LeetCode problems
 

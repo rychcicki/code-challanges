@@ -1,21 +1,19 @@
-package org.example.dUnnaturalLanguageProcessing;
+package org.example.unnaturalLanguageProcessing;
 
-import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-@Slf4j
-class UnnaturalLanguageProcessing2Test {
-    private final UnnaturalLanguageProcessing2 unnaturalLanguageProcessing2 = new UnnaturalLanguageProcessing2();
+class UnnaturalLanguageProcessingLoopVersionTest {
+    private final UnnaturalLanguageProcessingLoopVersion unnaturalLang = new UnnaturalLanguageProcessingLoopVersion();
 
     @Test
     void shouldReturnTrueWhenIsVowelOrFalseWhenIsConsonant() {
         char vowelA = 'a';
         char vowelE = 'e';
         char consonantB = 'b';
-        boolean isVowelA = unnaturalLanguageProcessing2.isVowel(vowelA);
-        boolean isVowelE = unnaturalLanguageProcessing2.isVowel(vowelE);
-        boolean isNotVowel = unnaturalLanguageProcessing2.isVowel(consonantB);
+        boolean isVowelA = unnaturalLang.isVowel(vowelA);
+        boolean isVowelE = unnaturalLang.isVowel(vowelE);
+        boolean isNotVowel = unnaturalLang.isVowel(consonantB);
         Assertions.assertAll(
                 () -> Assertions.assertTrue(isVowelA),
                 () -> Assertions.assertTrue(isVowelE),
@@ -36,11 +34,11 @@ class UnnaturalLanguageProcessing2Test {
         String sentence5 = "deddeddeddeddeddeddeddeddeddeddeddeddeddeddeddeddeddeddeddeddeddeddeddeddeddeddeddedded";
         String resultOfProcessing5 = "ded.ded.ded.ded.ded.ded.ded.ded.ded.ded.ded.ded.ded.ded.ded.ded.ded.ded.ded.ded" +
                 ".ded.ded.ded.ded.ded.ded.ded.ded.ded";
-        String sentenceForTest1 = unnaturalLanguageProcessing2.unnaturalLanguageProcessing(sentence1);
-        String sentenceForTest2 = unnaturalLanguageProcessing2.unnaturalLanguageProcessing(sentence2);
-        String sentenceForTest3 = unnaturalLanguageProcessing2.unnaturalLanguageProcessing(sentence3);
-        String sentenceForTest4 = unnaturalLanguageProcessing2.unnaturalLanguageProcessing(sentence4);
-        String sentenceForTest5 = unnaturalLanguageProcessing2.unnaturalLanguageProcessing(sentence5);
+        String sentenceForTest1 = unnaturalLang.unnaturalLanguageProcessing(sentence1);
+        String sentenceForTest2 = unnaturalLang.unnaturalLanguageProcessing(sentence2);
+        String sentenceForTest3 = unnaturalLang.unnaturalLanguageProcessing(sentence3);
+        String sentenceForTest4 = unnaturalLang.unnaturalLanguageProcessing(sentence4);
+        String sentenceForTest5 = unnaturalLang.unnaturalLanguageProcessing(sentence5);
         Assertions.assertAll(
                 () -> Assertions.assertEquals(sentenceForTest1, resultOfProcessing1),
                 () -> Assertions.assertEquals(sentenceForTest2, resultOfProcessing2),

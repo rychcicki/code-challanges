@@ -1,18 +1,17 @@
-package org.example.aStartUp2;
+package org.example.startUp;
 
 import java.util.Scanner;
 import java.util.Set;
 
-/**
- * https://codeforces.com/problemset/problem/420/A
- * Solution with Collections (Set), loops and Scanner
- */
-public class AStartUp2 {
-    Scanner sc = new Scanner(System.in);
-    String nameOfFirm = sc.nextLine();
+// https://codeforces.com/problemset/problem/420/A
+// Solution with Collections (Set), loops and Scanner
 
-    public boolean aStartUp2(String nameOfFirm) {
-        Set<Character> symmetricalLetters = Set.of('A', 'H', 'I', 'M', 'O', 'T', 'U', 'V', 'W', 'X', 'Y');
+class StartUpSetAndScannerVersion {
+    private final Scanner sc = new Scanner(System.in);
+    private final String nameOfFirm = sc.nextLine();
+
+    boolean startUpSetAndScannerVersion(String nameOfFirm) {
+        final Set<Character> symmetricalLetters = Set.of('A', 'H', 'I', 'M', 'O', 'T', 'U', 'V', 'W', 'X', 'Y');
 
         boolean flag = true;
         int lengthOfName = nameOfFirm.length();

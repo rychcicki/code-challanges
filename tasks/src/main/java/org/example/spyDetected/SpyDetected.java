@@ -1,4 +1,4 @@
-package org.example.aSpyDetected1;
+package org.example.spyDetected;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,23 +8,22 @@ import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.stream.Collectors;
 
-/**
- * https://codeforces.com/problemset/problem/1512/A
- */
-public class ASpyDetected1 {
-    FastReader sc = new FastReader();
-    int numberOfTests = sc.nextInt();
+// https://codeforces.com/problemset/problem/1512/A
+
+class SpyDetected {
+    private final FastReader sc = new FastReader();
+    private final int numberOfTests = sc.nextInt();
 
     void loop() {
         for (int i = 1; i <= numberOfTests; i++) {
-            aSpyDetected1(sc);
+            spyDetected(sc);
         }
     }
 
-    int aSpyDetected1(FastReader sc) {
+    int spyDetected(FastReader sc) {
         int unique = 0;
 
-        int lengthOfArray = sc.nextInt();
+        final int lengthOfArray = sc.nextInt();
         int[] arr = new int[lengthOfArray];
 
         for (int i = 0; i < lengthOfArray; i++) {
@@ -50,7 +49,7 @@ public class ASpyDetected1 {
         return unique;
     }
 
-    static class FastReader {
+    private static class FastReader {
         BufferedReader br;
         StringTokenizer st;
 

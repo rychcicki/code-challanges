@@ -1,22 +1,21 @@
-package org.example.fBinaryNotation;
+package org.example.binaryNotation;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-/**
- * https://codeforces.com/problemset/problem/188/F
- * WARNING: Submit only in Roco language!!! It is not possible to submit code in Java.
- */
-public class FBinaryNotation {
-    FBinaryNotation.FastReader sc = new FastReader();
-    int n = sc.nextInt();
+// https://codeforces.com/problemset/problem/188/F
+// WARNING: Submit only in Roco language! It is not possible to submit code in Java.
+
+class BinaryNotation {
+    private final BinaryNotation.FastReader sc = new FastReader();
+    private final int n = sc.nextInt();
 
     int binaryNotation(int n) {
-        int[] binaryArr = new int[21];
+        final int[] binaryArr = new int[21];
         int index = 0;
-        StringBuilder binaryBuilder = new StringBuilder();
+        final StringBuilder binaryBuilder = new StringBuilder();
 
         while (n > 0) {
             binaryArr[index++] = n % 2;
@@ -29,7 +28,7 @@ public class FBinaryNotation {
         return Integer.parseInt(binaryBuilder.toString());
     }
 
-    static class FastReader {
+    private static class FastReader {
         BufferedReader br;
         StringTokenizer st;
 

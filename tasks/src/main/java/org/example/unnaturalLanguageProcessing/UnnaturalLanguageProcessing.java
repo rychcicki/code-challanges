@@ -1,4 +1,4 @@
-package org.example.dUnnaturalLanguageProcessing;
+package org.example.unnaturalLanguageProcessing;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,12 +8,11 @@ import java.util.StringTokenizer;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-/**
- * https://codeforces.com/problemset/problem/1915/D
- */
-public class UnnaturalLanguageProcessing {
-    FastReader sc = new FastReader();
-    int numberOfTests = sc.nextInt();
+// https://codeforces.com/problemset/problem/1915/D
+
+class UnnaturalLanguageProcessing {
+    private final FastReader sc = new FastReader();
+    private int numberOfTests = sc.nextInt();
 
     void loop() {
         while (numberOfTests-- > 0) {
@@ -23,7 +22,7 @@ public class UnnaturalLanguageProcessing {
         }
     }
 
-    public static String unnaturalLanguageProcessing(String sentence) {
+    static String unnaturalLanguageProcessing(String sentence) {
         StringBuilder stringBuilder = new StringBuilder();
 
         Stream<String> streamSentence = Stream.of(sentence);
@@ -41,7 +40,9 @@ public class UnnaturalLanguageProcessing {
         changedSentence.replaceAll(c -> c.replace("CVCV", "CV.CV"));
         changedSentence.replaceAll(c -> c.replace("CVCV", "CV.CV"));
 
-        String pattern = changedSentence.toString().replace("[", "").replace("]", "");
+        final String pattern = changedSentence
+                .toString()
+                .replace("[", "").replace("]", "");
 
         int j = 0;
         for (int i = 0; i < pattern.length(); i++) {
@@ -55,7 +56,7 @@ public class UnnaturalLanguageProcessing {
         return stringBuilder.toString();
     }
 
-    static class FastReader {
+    private static class FastReader {
         BufferedReader br;
         StringTokenizer st;
 

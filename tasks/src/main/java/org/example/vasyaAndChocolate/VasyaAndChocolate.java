@@ -2,13 +2,11 @@ package org.example.vasyaAndChocolate;
 
 import java.util.Scanner;
 
-public class VasyaAndChocolate {
+// https://codeforces.com/problemset/problem/1065/A
 
-    /**
-     * https://codeforces.com/problemset/problem/1065/A
-     */
-    public long vasyaChocolate() {
-        Scanner sc = new Scanner(System.in);
+class VasyaAndChocolate {
+    long vasyaAndChocolate() {
+        final Scanner sc = new Scanner(System.in);
 
         int numberOfInputs = sc.nextInt();
         long cashInRoubles;
@@ -26,7 +24,8 @@ public class VasyaAndChocolate {
             if (barsToBuy * costOfOneBar > cashInRoubles) {
                 output = cashInRoubles / costOfOneBar;
             } else {
-                output = (allCost * barsToBuy) + (allCost * barsForFree) + (long) ((cashInRoubles % (barsToBuy * costOfOneBar)) / costOfOneBar);
+                output = (allCost * barsToBuy) + (allCost * barsForFree) +
+                        (long) ((cashInRoubles % (barsToBuy * costOfOneBar)) / costOfOneBar);
             }
         }
         sc.close();
